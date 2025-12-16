@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %} {% block title %}My Projects{% endblock %} {%
+block content %}
+<h1>My Projects</h1>
+<p>Here are some projects I've worked on:</p>
+
+{% block content %} {% if projects %}
+<ul>
+  {% for project in projects %}
+  <li><strong>{{ project.name }}</strong>: {{ project.description }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No projects to display yet.</p>
+{% endif %} {% endblock %}
