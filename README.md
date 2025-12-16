@@ -1,192 +1,265 @@
-# 🎯 Portfolio Website
+<div align="center">
 
-A modern, responsive portfolio website built with **Django** to showcase your professional projects, skills, and achievements in an elegant and professional manner.
+<h1>Portfolio Website</h1>
 
----
+<p><strong>Modern • Responsive • Professional</strong></p>
 
-## ✨ Features
+<p>
+  <img src="https://img.shields.io/badge/Django-Framework-092E20?style=for-the-badge&logo=django" />
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge" />
+</p>
 
-- **🏠 Home Page** – Create a captivating landing page to welcome visitors
-- **👤 About Me** – Share your background, skills, and professional journey
-- **💼 Projects Showcase** – Display your portfolio projects with descriptions
-- **📬 Contact Section** – Enable visitors to get in touch with you
-- **🎨 Responsive Design** – Beautiful UI that adapts to all devices
-- **⚡ Custom Error Pages** – Professional 404 error handling
-- **🚀 Production Ready** – Optimized settings and security configurations
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## Overview
 
-| Technology | Purpose |
-|-----------|---------|
-| **Python 3** | Core programming language |
-| **Django 6.0** | Web framework |
-| **HTML5** | Markup structure |
-| **CSS3** | Styling and responsive design |
-| **SQLite** | Database (default) |
+A clean, scalable, and fully responsive **portfolio website built with Django**. Designed to showcase projects, skills, and experience with a professional layout that looks great on desktop, tablet, and mobile.
+
+This project follows Django best practices and is structured for **easy customization**, **future expansion**, and **production deployment**.
 
 ---
 
-## 📋 Prerequisites
+## Key Features
 
-Before you begin, ensure you have the following installed:
-
-- **Python 3.8+** – [Download here](https://www.python.org/downloads/)
-- **pip** – Python package manager (included with Python)
-- **Git** – Version control (optional)
+<ul>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/homeassistant.svg" width="14"/> Home Page – Strong landing section with introduction</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/aboutdotme.svg" width="14"/> About Section – Personal background, skills, and journey</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" width="14"/> Projects Showcase – Highlight featured work</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/minutemailer.svg" width="14"/> Contact Page – Easy communication channel</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/responsive.svg" width="14"/> Fully Responsive – Optimized for all screen sizes</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bugcrowd.svg" width="14"/> Custom 404 Page – Clean error handling</li>
+  <li><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/securityscorecard.svg" width="14"/> Secure & Scalable – Ready for production</li>
+</ul>
 
 ---
 
-## 🚀 Installation
+## Tech Stack
 
-### 1. **Clone the Repository**
+| Technology                                                                                      | Role             |
+| ----------------------------------------------------------------------------------------------- | ---------------- |
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" width="14"/> Python 3 | Core language    |
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/django.svg" width="14"/> Django   | Web framework    |
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/html5.svg" width="14"/> HTML5     | Markup           |
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/css3.svg" width="14"/> CSS3       | Styling & layout |
+| <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sqlite.svg" width="14"/> SQLite   | Default database |
+
+---
+
+## Prerequisites
+
+Ensure the following tools are installed:
+
+* <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" width="14"/> Python **3.8+**
+* <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pypi.svg" width="14"/> pip
+* <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/git.svg" width="14"/> Git (optional)
+
+---
+
+## Installation & Setup
+
+### 1. Clone Repository
+
 ```bash
 git clone https://github.com/yourusername/portfolio.git
 cd portfolio
-2. Create a Virtual Environment
+```
+
+### 2. Create Virtual Environment
+
+```bash
 # Windows
 python -m venv venv
 venv\Scripts\activate
 
-# macOS/Linux
+# macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
-3. Install Dependencies
+```
+
+### 3. Install Dependencies
+
+```bash
 pip install django
-4. Apply Migrations
+```
+
+### 4. Run Migrations
+
+```bash
 python manage.py migrate
-5. Run the Development Server
-Run in terminal
+```
+
+### 5. Start Development Server
+
+```bash
 python manage.py runserver
-Visit your portfolio at: http://127.0.0.1:8000/
+```
 
-📁 Project Structure
+Open your browser:
+
+```
+http://127.0.0.1:8000/
+```
+
+---
+
+## Project Structure
+
+```
 portfolio/
-├── portfolio/               # Project settings and configuration
-│   ├── settings.py         # Django configuration
-│   ├── urls.py             # Main URL routing
-│   ├── wsgi.py             # WSGI application
-│   └── asgi.py             # ASGI application
-├── main/                   # Main application
-│   ├── templates/          # HTML templates
-│   │   ├── main/
-│   │   │   ├── base.html   # Base template
-│   │   │   ├── home.html   # Home page
-│   │   │   ├── about.html  # About page
-│   │   │   ├── projects.html # Projects page
-│   │   │   ├── contact.html # Contact page
-│   │   │   └── 404.html    # 404 error page
-│   │   └── ...
-│   ├── static/             # Static files (CSS, JS, images)
-│   ├── views.py            # View functions
-│   ├── urls.py             # App URL routing
-│   ├── models.py           # Database models
-│   └── ...
-├── manage.py               # Django management script
-└── db.sqlite3              # SQLite database
-🎯 Available Routes
-| Route | Page | Description | |-------|------|-------------| | / | Home | Welcome page with introduction | | /about/ | About | Your background and skills | | /projects/ | Projects | Showcase of your work | | /contact/ | Contact | Contact form or information | | /404/ | 404 Error | Custom error page (for testing) |
+│
+├── portfolio/            # Project configuration
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── main/                 # Core application
+│   ├── templates/
+│   │   └── main/
+│   │       ├── base.html
+│   │       ├── home.html
+│   │       ├── about.html
+│   │       ├── projects.html
+│   │       ├── contact.html
+│   │       └── 404.html
+│   ├── static/
+│   ├── views.py
+│   ├── urls.py
+│   └── models.py
+│
+├── manage.py
+└── db.sqlite3
+```
 
-🎨 Customization
-Update Your Information
-Edit main/templates/main/home.html:
+---
 
-<!-- Customize your name and headline -->
+## Routes
+
+| URL          | Page     | Description         |
+| ------------ | -------- | ------------------- |
+| `/`          | Home     | Landing page        |
+| `/about/`    | About    | Background & skills |
+| `/projects/` | Projects | Portfolio showcase  |
+| `/contact/`  | Contact  | Contact details     |
+| `/404/`      | Error    | Custom error page   |
+
+---
+
+## Customization Guide
+
+### Update Home Page
+
+`main/templates/main/home.html`
+
+```html
 <h1>Your Name</h1>
 <p>Your Professional Title</p>
-Edit main/templates/main/about.html:
+```
 
-<!-- Update your bio and skills -->
+### Update About Page
+
+`main/templates/main/about.html`
+
+```html
 <h1>About Me</h1>
 <p>Your biography here...</p>
-Edit main/views.py:
+```
 
-# Add your projects to the projects view
+### Add Projects
+
+`main/views.py`
+
+```python
 my_projects = [
-    {'name': 'Your Project', 'description': 'Description here'},
-    # Add more projects...
+    {"name": "Project Name", "description": "Project description"},
 ]
-⚙️ Configuration
-Development vs. Production
-The settings.py file is configured for development. For production deployment:
+```
 
-# settings.py
+---
 
-# Set to False in production
+## Production Configuration
+
+```python
 DEBUG = False
+ALLOWED_HOSTS = ['yourdomain.com']
 
-# Add your domain
-ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com']
-
-# Configure static files
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
-🌐 Deployment
-Deploy to Heroku
-Create a Procfile:
-web: gunicorn portfolio.wsgi
-Install production requirements:
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+```
+
+---
+
+## Deployment Options
+
+### Heroku
+
+```bash
 pip install gunicorn psycopg2-binary python-decouple
-Push to Heroku:
-heroku create your-app-name
-git push heroku main
-Deploy to PythonAnywhere
-Visit PythonAnywhere.com
-Upload your project
-Configure a Web app with Django
-Set static files mapping
-🔒 Security Best Practices
-Keep your SECRET_KEY confidential
-Use environment variables for sensitive data
-Set DEBUG = False in production
-Use HTTPS in production
-Keep Django and dependencies updated
-📦 Adding More Features
-Create a New App
-python manage.py startapp blog
-Create Models
-# blog/models.py
-from django.db import models
+```
 
-class BlogPost(models.Model):
-    title = models.CharField(max_length=200)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-Register in Admin
-# blog/admin.py
-from django.contrib import admin
-from .models import BlogPost
+`Procfile`
 
-admin.site.register(BlogPost)
-🧪 Testing
-Run tests with:
+```
+web: gunicorn portfolio.wsgi
+```
 
+### PythonAnywhere
+
+* Upload project
+* Configure Django web app
+* Map static files
+
+---
+
+## Security Best Practices
+
+* Keep `SECRET_KEY` private
+* Use environment variables
+* Disable `DEBUG` in production
+* Enable HTTPS
+* Update dependencies regularly
+
+---
+
+## Testing
+
+```bash
 python manage.py test
-Create test files in main/tests.py and follow Django testing best practices.
+```
 
-📚 Learning Resources
-Django Documentation – Official Django docs
-Python.org – Python resources
-MDN Web Docs – HTML/CSS reference
-Real Python – In-depth tutorials
-🤝 Contributing
-Contributions are welcome! To contribute:
+---
 
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
+## Learning Resources
 
-💬 Support
-Have questions or need help?
+* Django Documentation
+* Python.org
+* MDN Web Docs
+* Real Python
 
-Open an Issue
-Check existing documentation
-Review Django official docs
-🌟 Acknowledgments
-Built with Django – A powerful web framework
-Inspired by modern portfolio design principles
-Thanks to the open-source community
-Made with ❤️ by LEVVIE-LIVVIE
+---
+
+## Contributing
+
+1. Fork repository
+2. Create feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
+
+---
+
+## Author
+
+<strong>LEVVIE-LIVVIE</strong>
+Built with Django • Designed for growth
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Open_Source-Contributions_Welcome-blue?style=for-the-badge" />
+
+</div>
